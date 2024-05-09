@@ -1,0 +1,38 @@
+footer {
+    display: flex;
+    align-items: center;
+    background-color: #1a1a1a;
+    height: 100px;
+
+    .container {
+        justify-content: space-between;
+        color: white;
+
+        ul li {
+            padding: 0;
+            line-height: 40px;
+            padding-right: 10px;
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+
+.social {
+    ul {
+        li {
+            a {
+                color: white;
+                padding: 0 5px;
+
+                i {
+                    font-size: large;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+}
