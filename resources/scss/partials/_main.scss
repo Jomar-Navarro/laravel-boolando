@@ -1,0 +1,110 @@
+.product {
+    margin: 40px auto;
+    position: relative;
+    display: inline-block;
+    padding: 0 9px;
+    img {
+        cursor: pointer;
+        width: 465px;
+        height: 670px;
+    }
+
+    .heart {
+        position: absolute;
+        top: 0;
+        right: 0;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        height: 50px;
+        width: 50px;
+        margin-top: 10px;
+        font-size: 2rem;
+
+        &:hover {
+            color: red;
+        }
+
+        .discount {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: white;
+            width: 55px;
+            height: 25px;
+            margin-bottom: 100px;
+            background-color: red;
+            color: white;
+        }
+    }
+}
+
+.product {
+    .eco {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: white;
+        width: 100px;
+        height: 25px;
+        margin-bottom: 100px;
+        margin-left: 60px;
+        background-color: green;
+        color: white;
+    }
+
+    .discount {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: white;
+        width: 55px;
+        height: 25px;
+        margin-bottom: 100px;
+        background-color: red;
+        color: white;
+    }
+
+    .eco-last {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: white;
+        width: 100px;
+        height: 25px;
+        margin-bottom: 100px;
+        background-color: green;
+        color: white;
+    }
+}
+
+.visible {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.prezzo {
+    color: red;
+    font-weight: 800;
+}
+
+.overline {
+    text-decoration: line-through;
+}
+
+.product:hover .visible {
+    display: none;
+}
