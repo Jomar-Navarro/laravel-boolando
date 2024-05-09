@@ -1,23 +1,24 @@
 footer {
     display: flex;
-    align-items: center;
     background-color: #1a1a1a;
-    height: 100px;
+    align-items: center;
+    height: 120px;
 
     .container {
         justify-content: space-between;
         color: white;
-
-        ul {
-            padding: 0;
-            li {
+        .wrapper {
+            ul {
                 padding: 0;
-                line-height: 40px;
-                padding-right: 10px;
+                li {
+                    padding: 0;
+                    line-height: 40px;
+                    padding-right: 10px;
 
-                a {
-                    text-decoration: none;
-                    color: white;
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
                 }
             }
         }

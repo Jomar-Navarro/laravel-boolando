@@ -1,6 +1,6 @@
 <footer>
     <div class="container d-flex">
-    <div>
+    <div class="wrapper">
         <h4>Boolando s.r.l</h4>
         <nav>
         <ul class="d-flex">
