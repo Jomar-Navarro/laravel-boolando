@@ -4,77 +4,24 @@
 @section('content')
 <main>
     <div class="container">
-        <div class="product">
-            <img class="visible" src="/img/1.webp" alt="productMainImage">
-            <img src="/img/1b.webp" alt="">
-            <span class="heart d-flex ">&hearts;</span>
-            <span class="discount d-flex"></span>
-            <span v-for="(badge, index) in productbadges" key="index" class="eco d-flex"></span>
-            <p></p>
-            <h3></h3>
-            <span class="prezzo">14,99 &euro;</span>
-            <span class="overline"> &euro;</span>
-        </div>
 
+        @foreach ($products as $item)
         <div class="product">
-            <img class="visible" src="/img/2.webp" alt="productMainImage">
-            <img src="/img/2b.webp" alt="">
-            <span class="heart d-flex ">&hearts;</span>
-            <span class="discount d-flex"></span>
-            <span v-for="(badge, index) in productbadges" :key="index" class="eco d-flex"></span>
-            <p></p>
-            <h3></h3>
-            <span class="prezzo">14,99 &euro;</span>
-            <span class="overline"> &euro;</span>
+            <img class="visible" src="/img/{{ $item['frontImage'] }}" alt="{{ $item['frontImage'] }}">
+            <img src="/img/{{ $item['backImage'] }}" alt="{{ $item['backImage'] }}">
+            <span class="heart d-flex {{ $item['isInFavorites'] ? 'active' : '' }}">&hearts;</span>
+            @if (isset($item['badges']))
+            @foreach ($item['badges'] as $badge)
+                <span class="discount d-flex">{{ $badge['value'] }}</span>
+                <span class="eco d-flex">{{ $badge['value'] }}</span>
+                @endforeach
+            @endif
+            <p>{{ $item['brand'] }}</p>
+            <h3>{{ $item['name'] }}</h3>
+            <span class="prezzo">{{ $item['price'] }} &euro;</span>
+            <span class="overline">{{ $item['price'] }} &euro;</span>
         </div>
-
-        <div class="product">
-            <img class="visible" src="/img/3.webp" alt="productMainImage">
-            <img src="/img/3b.webp" alt="">
-            <span class="heart d-flex ">&hearts;</span>
-            <span class="discount d-flex"></span>
-            <span v-for="(badge, index) in productbadges" :key="index" class="eco d-flex"></span>
-            <p></p>
-            <h3></h3>
-            <span class="prezzo">14,99 &euro;</span>
-            <span class="overline"> &euro;</span>
-        </div>
-
-        <div class="product">
-            <img class="visible" src="/img/4.webp" alt="productMainImage">
-            <img src="/img/4b.webp" alt="">
-            <span class="heart d-flex ">&hearts;</span>
-            <span class="discount d-flex"></span>
-            <span v-for="(badge, index) in productbadges" :key="index" class="eco d-flex"></span>
-            <p></p>
-            <h3></h3>
-            <span class="prezzo">14,99 &euro;</span>
-            <span class="overline"> &euro;</span>
-        </div>
-
-        <div class="product">
-            <img class="visible" src="/img/5.webp" alt="productMainImage">
-            <img src="/img/5b.webp" alt="">
-            <span class="heart d-flex ">&hearts;</span>
-            <span class="discount d-flex"></span>
-            <span v-for="(badge, index) in productbadges" :key="index" class="eco d-flex"></span>
-            <p></p>
-            <h3></h3>
-            <span class="prezzo">14,99 &euro;</span>
-            <span class="overline"> &euro;</span>
-        </div>
-
-        <div class="product">
-            <img class="visible" src="/img/6.webp" alt="productMainImage">
-            <img src="/img/6b.webp" alt="">
-            <span class="heart d-flex ">&hearts;</span>
-            <span class="discount d-flex"></span>
-            <span v-for="(badge, index) in productbadges" :key="index" class="eco d-flex"></span>
-            <p></p>
-            <h3></h3>
-            <span class="prezzo">14,99 &euro;</span>
-            <span class="overline"> &euro;</span>
-        </div>
+        @endforeach
     </div>
 </main>
 @endsection
