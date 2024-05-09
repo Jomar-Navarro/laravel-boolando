@@ -8,14 +8,17 @@ footer {
         justify-content: space-between;
         color: white;
 
-        ul li {
+        ul {
             padding: 0;
-            line-height: 40px;
-            padding-right: 10px;
+            li {
+                padding: 0;
+                line-height: 40px;
+                padding-right: 10px;
 
-            a {
-                text-decoration: none;
-                color: white;
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
             }
         }
     }
@@ -23,6 +26,7 @@ footer {
 
 .social {
     ul {
+        padding: 0;
         display: flex;
         li {
             a {
